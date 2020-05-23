@@ -1,0 +1,10 @@
+1. I would expect this NOT to compile. The static means that it will belong
+to the whole class. Not just an instance of a class. Moreover, Static does
+not have *this, which means that you can't access the instance variables of the
+class.
+
+
+2. I would expect this to be possible, since it's an instance of each of the
+objects that you create from the class, you can call the member the static 
+variable b, since b belongs to the whole class. (so the nonstatic member 
+functions can access the static and the instance)

@@ -1,0 +1,11 @@
+1. The size must be non-negative. 
+   The capacity is >= to size.
+   The capacity must be 2xSize +1
+   The Size must always increase after adding a string
+
+2. The add must re size the arraList if adding a new element will cause size to
+        equal the capacity
+   If resizing is needed, it has to make sure it properly copies, deletes the
+        old array and makes the new array
+   It has to make sure the size of the array went up after adding the element
+   

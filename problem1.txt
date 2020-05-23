@@ -1,0 +1,22 @@
+1. I would expect this not to work, since you canont create an abstract
+base class on its own. The virtual functions must be defined somewhere
+so in order for us to use the pointer to access an Object of class Shape, the
+object must be created first. (which requires the virtual function to have
+a definition)
+
+2. 
+Shape* some_object_from_shape = new Shape();
+void foo(Shape* s)
+{
+
+    std::cout << s->area() << std::endl;
+
+}
+
+// calling it with foo(some_object_from_shape);
+
+            The problem is the fact that a direct access to Shape without
+            any other class being derived from it, makes the virtual function
+            has no meaning. For example, the area() in the shape is not defined
+            , we dont know what the area() is supposed to do since the
+            defintion is supposed to be given by the derived classes.

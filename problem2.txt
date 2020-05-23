@@ -1,0 +1,22 @@
+1. IF & ONLY IF no input validation is required make this class with implicit. Imagine you wanting to add a student id (and your program's only job is to add a student id) then you would have something like
+
+void AddStudentID(StudentId id)
+{
+    some_vector_defined.push_back(id)
+}
+
+If you had an implicit const, then you would lose control, as you allow user
+to by pass part of your design choice and insert numbers that you should not 
+store. 
+            HOWEVER,Having the EXPLICIT cosntructor will make sure you
+            will still be able to control what the user can put in 
+            (even stop you from making mistakes) and help you have a
+            StudentId class that will properly input validate the ID's
+            
+_______________________________________________________________________________
+
+2. I would suggest making Complex(const Complex& other) EXPLICIT..
+Having EXPLICIT there allows you to make sure you will only be able to pass
+in a Complex reference object ONLY, in case of wanting to add two complex 
+OBJECTS. Having the explicit there allows both complex c(2,4) AND 
+complex c(SOME_COMPLEX_Object)
